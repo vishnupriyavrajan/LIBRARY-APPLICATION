@@ -158,6 +158,7 @@ app.post("/register",async(req,res)=> {
 const port=process.env.PORT||6007;
 
 
-app.listen(port,()=>console.log(
-    'listening song on port 6007'
-))
+const server= app.listen(process.env.PORT||6007,()=>{
+    const port = server.address().port;
+    console.log(`Express is working on port $"{port}`);
+});
