@@ -155,8 +155,6 @@ app.post("/register",async(req,res)=> {
     
 });
 
-const port=process.env.PORT||6007;
-
 
 const server= app.listen(process.env.PORT||6007,()=>{
     const port = server.address().port;
